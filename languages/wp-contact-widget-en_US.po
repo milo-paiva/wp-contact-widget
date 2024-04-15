@@ -1,0 +1,56 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://github.com/milo-paiva/wp-contact-widgetPOT-"
+"Creation-Date: 2013-05-21 09:44:12+00:00\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2024-04-15 12:00-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: wp-contact-widget.php:42
+msgid "Contact Widget"
+msgstr "Contact Widget"
+
+#: wp-contact-widget.php:43
+msgid "Show your contact information with icon and external link"
+msgstr "Show your contact information with icon and external link"
+
+#: wp-contact-widget.php:114
+msgid "Contact Information"
+msgstr "Contact Information"
+
+#: wp-contact-widget.php:123
+msgid "Title:"
+msgstr "Title:"
+
+#: wp-contact-widget.php:127
+msgid "Address:"
+msgstr "Address:"
+
+#: wp-contact-widget.php:131
+msgid "Google Maps Link:"
+msgstr "Google Maps Link:"
+
+#: wp-contact-widget.php:135
+msgid "Telephone:"
+msgstr "Telephone:"
+
+#: wp-contact-widget.php:139
+msgid "WhatsApp:"
+msgstr "WhatsApp:"
+
+#: wp-contact-widget.php:143
+msgid "Email:"
+msgstr "Email:"
+
+#: wp-contact-widget.php:147
+msgid "Opening hours: "
+msgstr "Opening hours: "

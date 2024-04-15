@@ -1,0 +1,40 @@
+/* mobile function */
+.mob{display:block}
+.desk{display:none}
+
+@media screen and (min-width: 768px){
+	.mob{display:none}
+	.desk{display:block}
+}
+
+.ctwidget{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.ctwidget .fa{
+    margin-right: 3px;
+}
+
+.ctwidget-phone,
+.ctwidget-whats,
+.ctwidget-mail{
+    display: flex;
+    align-items: center;
+}
+
+.ctwidget-address .fa{
+    margin-top: 5px;
+}
+
+.ctwidget-address_content{margin: 0px 0px 0px 10px; border:0;}
+.ctwidget-company_name{ border:0;}
+.ctwidget-contact_address{margin-left: 30px;border:0; padding-top:10px;}
+.ctwidget-contact_phone{ border:0;}
+.ctwidget-contact_phone a{ color:#666666; text-decoration:none;border:0 !important;}
+.ctwidget-contact_phone a:hover{ color:#000000;}
+.ctwidget-email{margin: 0px 0px 10px 0px;border:0;}
+.ctwidget-contact_email{ border:0;border:0;}
+.ctwidget-contact_email a{ color:#666666;text-decoration:none;border:0 !important;}
+.ctwidget-contact_email a:hover{ color:#000000;}
+
