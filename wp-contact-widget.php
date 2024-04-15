@@ -65,7 +65,7 @@ if( !class_exists( 'Kiwee_Contact_Info' )){
 			{
 				$output .='<div class="ctwidget ctwidget-address">
 					<i class="fa fa-map-marker"></i>
-					<div class="ctwidget-contact_phone"><a href="'.$instance['addressLink'].'" target="_blank">'.$instance['address'].'</a></div>
+					<div class="ctwidget-contact_phone"><a href="'.$instance['addressLink'].'" target="_blank">'. esc_html_e($instance['address']) .'</a></div>
 				</div>';
 			}
 			
@@ -73,7 +73,7 @@ if( !class_exists( 'Kiwee_Contact_Info' )){
 			{
 				$output .='<div class="ctwidget ctwidget-phone">
 					<i class="fa fa-phone"></i>
-					<div class="ctwidget-contact_phone"><a href="tel:055'.preg_replace('/[^0-9]/', '', $instance['phone']).'">'.$instance['phone'].'</a></div>
+					<div class="ctwidget-contact_phone"><a href="tel:055'.preg_replace('/[^0-9]/', '', $instance['phone']).'">'. esc_html__($instance['phone']) .'</a></div>
 				</div>';
 			}
 
@@ -81,11 +81,11 @@ if( !class_exists( 'Kiwee_Contact_Info' )){
 			{
 				$output .='<div class="desk"><div class="ctwidget ctwidget-whats">
 					<i class="fa fa-whatsapp"></i>
-					<div class="ctwidget-contact_phone"><a href="https://web.whatsapp.com/send?phone=55'.preg_replace('/[^0-9]/', '', $instance['whatsapp']).'&text=Olá!%20Acessei%20o%20site%20e%20gostaria%20de%20mais%20informações%20sobre" target="_blank">'.$instance['whatsapp'].'</a></div>
+					<div class="ctwidget-contact_phone"><a href="https://web.whatsapp.com/send?phone=55'.preg_replace('/[^0-9]/', '', $instance['whatsapp']).'&text=Olá!%20Acessei%20o%20site%20e%20gostaria%20de%20mais%20informações%20sobre" target="_blank">'. esc_html_e($instance['whatsapp']) .'</a></div>
 				</div></div>
 				<div class="mob"><div class="ctwidget ctwidget-whats">
 					<i class="fa fa-whatsapp"></i>
-					<div class="ctwidget-contact_phone"><a href="https://api.whatsapp.com/send?phone=55'.preg_replace('/[^0-9]/', '', $instance['whatsapp']).'&text=Olá!%20Acessei%20o%20site%20e%20gostaria%20de%20mais%20informações%20sobre" target="_blank">'.$instance['whatsapp'].'</a></div>
+					<div class="ctwidget-contact_phone"><a href="https://api.whatsapp.com/send?phone=55'.preg_replace('/[^0-9]/', '', $instance['whatsapp']).'&text=Olá!%20Acessei%20o%20site%20e%20gostaria%20de%20mais%20informações%20sobre" target="_blank">'. esc_html_e($instance['whatsapp']) .'</a></div>
 				</div></div>';
 			}
 
@@ -94,14 +94,14 @@ if( !class_exists( 'Kiwee_Contact_Info' )){
 			{
 				$output .='<div class="ctwidget ctwidget-mail">
 							<i class="fa fa-envelope"></i>
-							<div class="ctwidget-contact_email"><a href="mailto:'.$instance['contact_email'].'">'.$instance['contact_email'].'</a></div>
+							<div class="ctwidget-contact_email"><a href="mailto:'.$instance['contact_email'].'">'. esc_html_e($instance['contact_email']) .'</a></div>
 						</div>';	
 			}	
 			
 			if ( !empty( $instance['open_hours'] ) )
 			{
 				$output .='<div class="ctwidget ctwidget-mail">
-							<div class="ctwidget-open_hours"><i class="fa fa-clock-o"></i>'.$instance['open_hours'].'</div>
+							<div class="ctwidget-open_hours"><i class="fa fa-clock-o"></i>'. esc_html_e($instance['open_hours']) .'</div>
 						</div>';	
 			}	
 			
@@ -162,13 +162,13 @@ if( !class_exists( 'Kiwee_Contact_Info' )){
 		 */
 		public function update( $new_instance, $old_instance ) {
 			$instance = array();
-			$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-			$instance['address'] = ( ! empty( $new_instance['address'] ) ) ? strip_tags( $new_instance['address'] ) : '';
-			$instance['addressLink'] = ( ! empty( $new_instance['addressLink'] ) ) ? strip_tags( $new_instance['addressLink'] ) : '';
-			$instance['phone'] = ( ! empty( $new_instance['phone'] ) ) ? strip_tags( $new_instance['phone'] ) : '';
-			$instance['whatsapp'] = ( ! empty( $new_instance['whatsapp'] ) ) ? strip_tags( $new_instance['whatsapp'] ) : '';
-			$instance['contact_email'] = ( ! empty( $new_instance['contact_email'] ) ) ? strip_tags( $new_instance['contact_email'] ) : '';
-			$instance['open_hours'] = ( ! empty( $new_instance['open_hours'] ) ) ? strip_tags( $new_instance['open_hours'] ) : '';
+			$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? wp_strip_all_tags( $new_instance['title'] ) : '';
+			$instance['address'] = ( ! empty( $new_instance['address'] ) ) ? wp_strip_all_tags( $new_instance['address'] ) : '';
+			$instance['addressLink'] = ( ! empty( $new_instance['addressLink'] ) ) ? wp_strip_all_tags( $new_instance['addressLink'] ) : '';
+			$instance['phone'] = ( ! empty( $new_instance['phone'] ) ) ? wp_strip_all_tags( $new_instance['phone'] ) : '';
+			$instance['whatsapp'] = ( ! empty( $new_instance['whatsapp'] ) ) ? wp_strip_all_tags( $new_instance['whatsapp'] ) : '';
+			$instance['contact_email'] = ( ! empty( $new_instance['contact_email'] ) ) ? wp_strip_all_tags( $new_instance['contact_email'] ) : '';
+			$instance['open_hours'] = ( ! empty( $new_instance['open_hours'] ) ) ? wp_strip_all_tags( $new_instance['open_hours'] ) : '';
 
 			return $instance;
 		}
